@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: oracle-ai-ap-platform
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    region: oregon
+    envVars:
+      - key: PORT
+        value: 8765
+      - key: AP_CONFIG
+        value: /app/.runtime/app.json
+    healthCheckPath: /openapi.json

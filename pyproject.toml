@@ -1,0 +1,21 @@
+[project]
+name = "oracle-ap-workspace"
+version = "0.1.0"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "fastapi>=0.115,<1",
+  "uvicorn>=0.30,<1",
+  "psycopg[binary]>=3.2,<4",
+  "langgraph>=1,<2",
+  "pypdf>=6,<8",
+  "cryptography>=45",
+  "httpx>=0.28,<1",
+  "python-multipart>=0.0.20",
+  "pillow>=11",
+  "sqlglot>=26",
+  "boto3>=1.35",
+  "pypdfium2>=5.15.2",
+  "rapidocr-onnxruntime>=1.4.4",
+]
+[dependency-groups]
+dev = ["pgserver==0.1.4", "pytest>=8", "reportlab>=4"]

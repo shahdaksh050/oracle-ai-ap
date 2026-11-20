@@ -1,0 +1,8 @@
+{
+  "version": "domestic-po-v1",
+  "currency": "INR",
+  "executive_above": "500000.00",
+  "approval_ttl_hours": 24,
+  "sandbox_memory_mib": 128,
+  "sandbox_wall_seconds": 3
+}
