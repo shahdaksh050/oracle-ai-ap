@@ -295,25 +295,3 @@ uv run python -m ap.admin reconcile
 | Notifications | Configure tenant-specific approved `slack_webhooks` and HTTPS `public_origin`. The tenant worker drains the outbox. Use `python -m ap.admin notify --tenant TENANT` to process a delivery manually. The delivery command processes one event per invocation and backs off after failure. The message contains a workflow link. Approval takes place in the authenticated application. |
 | Rollout | Use a dedicated shadow tenant for replay. After finance and QA sign-off, enable internal writes only for the approved supplier cohort. Preserve the audit trail and reconcile daily for five business days. The service exposes no bank transfer or ERP posting operation. |
 
----
-
-## 11. Instructions to Push to WildCatter's GitHub
-
-Once permissions are granted to your GitHub account:
-
-```bash
-# 1. Initialize git (if not already done)
-git init -b main
-
-# 2. Stage all tracked project files
-git add .
-
-# 3. Commit the project
-git commit -m "feat: AI-Native Enterprise Oracle Accounts Payable (AP) Platform"
-
-# 4. Connect to WildCatter repository
-git remote add origin https://github.com/WildCatter/<YOUR-ASSIGNED-REPO>.git
-
-# 5. Push to main branch
-git push -u origin main
-```
