@@ -69,7 +69,7 @@ flowchart TD
 | **Stage 3 Hardcoded Matrix** | Movements > ₹5,00,000 freeze state for Executive approval | `ap/policy.py`, `migrations/001_pilot.sql` | **Active** |
 | **Driver-Level Partitioning** | Force `tenant_id` & `user_role` injection via session | `ap/db.py` (`set_config`), Postgres `FORCE RLS` | **Active** |
 | **Just-In-Time UI** | Dynamic React/Tailwind frontend | `web/src/main.jsx` (JIT cards & query engine) | **Active** |
-| **Desktop Application** | Native desktop OS window / PWA manifest | `desktop.py`, `run-desktop.ps1`, `manifest.json` | **Active** |
+| **Desktop Application** | Native desktop OS window / PWA manifest | `desktop.py`, `run.ps1 -Desktop`, `manifest.json` | **Active** |
 | **External APIs** | REST endpoints with interactive Swagger docs | `ap/api.py` (`/docs`, `/openapi.json`) | **Active** |
 
 ---
@@ -93,10 +93,8 @@ This solution is **100% AI-native**, orchestrated through LangGraph state machin
 ## 4. Quickstart Guide (Desktop & Web)
 
 ### Option A: Desktop Application Mode (Windows)
-Run the dedicated desktop launcher to open the application in a standalone OS window (without browser navigation bars or tabs):
+Run the desktop launcher to open the application in a standalone OS window (without browser navigation bars or tabs):
 ```powershell
-.\run-desktop.ps1
-# or
 .\run.ps1 -Desktop
 # or
 python desktop.py
